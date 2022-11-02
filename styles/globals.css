@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+/* I want to make the font size responsive */
+
+@media (min-width: 1520px) {
+  * {
+    font-size: 1.6rem;
+  }
+}
+
+/* I want to style the scrollbar */
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #0f0d0d;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #7a7878;
+}
+
+/* I want to repeat the animation 3 times */
+#logo {
+  animation: logo 1s ease-in-out infinite;
+}
+
+/* I want to repeat the animation 3 times */
+
+@keyframes logo {
+  0% {
+    transform: skewX(10deg);
+  }
+  50% {
+    transform: skewX(-10deg);
+  }
+  100% {
+    transform: skewX(10deg);
+  }
+}
+
+.comment-animation {
+  animation: comment 0.5s ease-in-out forwards;
+  transition: all ease 0.5s;
+}
+
+@keyframes comment {
+  from {
+    opacity: 0;
+    transition: all 0.5s ease;
+    margin-right: 8rem;
+  }
+  to {
+    opacity: 1;
+    transition: all 0.5s ease;
+    margin-right: 0rem;
+  }
+}
